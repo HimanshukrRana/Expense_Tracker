@@ -7,7 +7,7 @@ import AppReducer from "./AppReducer";
 
 const initialState = {
   transactions: JSON.parse(localStorage.getItem("transactions")) || [
-    { id, amount: 100, text: "Salary", category: "expense" },
+    { id: 1, amount: 100, text: "Food", category: "expense" },
   ],
 };
 
