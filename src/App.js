@@ -65,43 +65,41 @@ import { AuthorizeUser, ProtectRoute } from "./middleware/auth";
 
 export default function App() {
   return (
-    <main>
-      {/* <Navbar /> */}
-      {/* <Contact /> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
+    // {/* <Navbar /> */}
+    // {/* <Contact /> */}
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/About" element={<About />} />
 
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Blog" element={<Blog />} />
-        {/* <Route router={router}></Route> */}
+      <Route path="/Contact" element={<Contact />} />
+      <Route path="/Blog" element={<Blog />} />
+      {/* <Route router={router}></Route> */}
 
-        <Route path="/SignIn" element={<Username />} />
+      <Route path="/SignIn" element={<Username />} />
 
-        <Route path="/register" element={<Register />} />
-        <Route
-          path="/password"
-          element={
-            <ProtectRoute>
-              <Password />
-            </ProtectRoute>
-          }
-        />
-        <Route
-          path="/profile"
-          element={
-            <AuthorizeUser>
-              <Profile />
-            </AuthorizeUser>
-          }
-        />
-        <Route path="/recovery" element={<Recovery />} />
-        <Route path="/reset" element={<Reset />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+      <Route path="/register" element={<Register />} />
+      <Route
+        path="/password"
+        element={
+          <ProtectRoute>
+            <Password />
+          </ProtectRoute>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <AuthorizeUser>
+            <Profile />
+          </AuthorizeUser>
+        }
+      />
+      <Route path="/recovery" element={<Recovery />} />
+      <Route path="/reset" element={<Reset />} />
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
 
-      {/* <RouterProvider router={router}></RouterProvider> */}
-    </main>
+    // {/* <RouterProvider router={router}></RouterProvider> */}
   );
 }
 
